@@ -15,7 +15,7 @@ import {
 } from "react-bootstrap";
 import { addToCart, removeFromCart } from "../actions/cartAction";
 
-const CartScreen = ({ match, location, history }) => {
+const CartScreen = ({ location, history }) => {
   const { id } = useParams();
   const productId = id;
   const qty = location.search ? Number(location.search.split("=")[1]) : 1;

@@ -9,7 +9,7 @@ import { useDispatch, useSelector } from "react-redux";
 import Message from "../components/shared/Message";
 import Loader from "../components/shared/Loader";
 
-const OrderScreen = ({ match }) => {
+const OrderScreen = () => {
   const { id } = useParams();
   const [sdkReady, setSdkReady] = useState(false);
   const dispatch = useDispatch();

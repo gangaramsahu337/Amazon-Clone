@@ -12,7 +12,7 @@ import {
   ListGroupItem,
   Form,
 } from "react-bootstrap";
-const ProductDetails = ({ history, match }) => {
+const ProductDetails = ({ history }) => {
   const [qty, setQty] = useState(1);
   const dispatch = useDispatch();
   const productDetails = useSelector((state) => state.productDetails);
@@ -21,7 +21,7 @@ const ProductDetails = ({ history, match }) => {
 
   useEffect(() => {
     dispatch(listProductDetails(id));
-  }, [dispatch, match]);
+  }, [dispatch]);
 
   const addToCartHandler = () => {
     history.push(`/cart/${id}?qty=${qty}`);
